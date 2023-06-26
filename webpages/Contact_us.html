@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="icon" type="image/x-icon" href="../Images/favicon.png">
+    <title>Contact Us</title>
+    
+    <link rel="stylesheet" href="../Stylesheets/contact_us.css">
+</head>
+<body>
+    <div class="contact">
+        <form onsubmit="sendEmail();reset(); return false;" >
+            <h3>Get in touch!</h3>
+            <input type="text" id="name" class="input-field" placeholder="Your Name" required>
+            <input type="email" id="email" class="input-field" placeholder="Your E-mail id" required>
+            <textarea id="message" class="input-field textarea" placeholder="How can we help you?"></textarea>
+            <button type="submit" class="btn">  Send   </button>
+        </form>
+
+    </div>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail(){
+            Email.send({
+                Host : "smtp.gmail.com",
+                Username : "tourism.india.29@gmail.com",
+                Password : "indiatourism",
+                To : 'tourism.india.29@gmail.com',
+                From : document.getElementById("email").value,
+                Subject : "New query",
+                Body : "Name: " + document.getElementById("name").value 
+                + "<br> Email: "+ document.getElementById("email").value
+                + "<br> Message: "+ document.getElementById("message").value
+            }).then(
+                window.location="./thank-you.html"
+            );
+        }
+    </script>
+    
+</body>
+</html>

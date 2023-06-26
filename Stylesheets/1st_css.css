@@ -1,0 +1,171 @@
+/*----------style.css------------*/
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  
+}
+body{
+  background-color: white;
+  
+}
+.header{
+width: auto;
+background-color: #f1f1f1;
+padding-top: 15px;
+padding-bottom: 15px;
+}
+.header p{
+font-size: 50px;
+padding-left: 15px;
+font-family: Arial, Helvetica, sans-serif;
+}
+svg path {
+  fill: #00394f;
+  stroke:#eee;
+  stroke-width: .25;
+}
+svg path:hover{
+  fill: #006284;
+  transition: 0.6s;
+  cursor: pointer;
+}
+svg{
+  width: 50%;
+  height: auto;
+  fill: #ccc;
+  stroke: #333;
+  stroke-width: 2;
+
+}
+.container{
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+margin-top: 45px;
+padding-bottom: 40px;
+}
+
+footer {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: #292c2f;
+  color: #bbb;
+  text-align: center;
+}
+ /* Dropdown Button */
+.dropbtn {
+background-color: white;
+color:black;
+padding: 5px;
+font-size: 12px;
+border: none;
+cursor: pointer;
+border-radius: 15px;
+width: 200px;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+background-color: #3e8e41;
+}
+
+/* The search field */
+#myInput {
+box-sizing: border-box;
+background-image: url('searchicon.png');
+background-position: 14px 12px;
+background-repeat: no-repeat;
+font-size: 16px;
+padding: 14px 20px 12px 45px;
+border: none;
+border-bottom: 1px solid #ddd;
+border-radius: 15px;
+}
+
+/* The search field when it gets focus/clicked on */
+#myInput:focus {outline: 3px solid #ddd;}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+display:block;
+padding-left: 950px;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+display:none;
+position: absolute;
+background-color: #f6f6f6;
+min-width: 230px;
+border-radius: 15px;
+border: 1px solid #ddd;
+z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+color: black;
+padding: 16px 16px;
+text-decoration: none;
+display:block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+footer a{
+text-decoration: none;
+
+color:white;
+padding-bottom: 10px;
+}
+footer{
+width: auto;
+}
+@media screen and (max-width:800px) {
+.dropbtn{
+  width: 100px;
+  display: flex;
+}
+.dropbtn #myInput{
+  text-align: center;
+}
+.dropdown{
+  padding-left: 250px;
+  padding-top: 15px;
+}
+.header p{
+  text-align: center;
+  font-size: 25px;
+}
+.container{
+  padding-top: 50px;
+  padding-bottom: 80px;
+  height: 110vw;
+}
+svg{
+    height:100%;
+    width:auto;
+}
+}
+@media screen and (max-width:400px) {
+.dropbtn{
+  width: 80px;
+  display: flex;
+}
+.dropbtn #myInput{
+  text-align: center;
+}
+.dropdown{
+  padding-left: 120px;
+  padding-top: 15px;
+}
+.header p{
+  text-align: center;
+  font-size: 25px;
+  font-style: italic;
+}
+}
